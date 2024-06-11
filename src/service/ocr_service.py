@@ -279,9 +279,8 @@ def scan_document1(img, document_rect=(70, 85, 400, 565)):
     return final
 
 
-CHECKPOINT_MODEL_PATH_MBv3 = r"model\model_mbv3_iou_mix_2C049.pth"
-# CHECKPOINT_MODEL_PATH_R50 = ".\model\model_r50_iou_mix_2C020.pth"
-CHECKPOINT_MODEL_PATH_R50 = r"model\model_mbv3_iou_mix_2C049.pth"
+CHECKPOINT_MODEL_PATH_MBv3 = "model/model_mbv3_iou_mix_2C049.pth"
+CHECKPOINT_MODEL_PATH_R50 = "model/model_mbv3_iou_mix_2C049.pth"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -291,12 +290,12 @@ model_mb = load_model(
     checkpoint_path=CHECKPOINT_MODEL_PATH_MBv3,
     device=device,
 )
-# model_res = load_model(
-#     num_classes=2,
-#     model_name="r50",
-#     checkpoint_path=CHECKPOINT_MODEL_PATH_R50,
-#     device=device,
-# )
+model_res = load_model(
+    num_classes=2,
+    model_name="r50",
+    checkpoint_path=CHECKPOINT_MODEL_PATH_R50,
+    device=device,
+)
 preprocess_transforms = image_preproces_transforms()
 ocr_model = PaddleOCR(use_angle_cls=True, lang="en")
 

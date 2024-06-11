@@ -34,7 +34,7 @@ PyYAML==6.0.1
 QtPy==2.4.1
 rapidfuzz==3.9.3
 Requests==2.32.3
-scipy==1.13.1
+scipy
 seqeval==1.2.2
 setuptools==68.2.2
 Shapely==2.0.4
