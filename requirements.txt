@@ -8,7 +8,7 @@ editdistance==0.8.1
 fastapi==0.111.0
 fasttext==0.9.2
 imgaug==0.4.0
-lanms==1.0.2
+# lanms==1.0.2
 lmdb==1.4.1
 lxml==4.9.3
 matplotlib==3.7.3
@@ -39,7 +39,7 @@ seqeval==1.2.2
 setuptools==68.2.2
 Shapely==2.0.4
 six==1.16.0
-skimage==0.0
+scikit-image
 torch==2.1.0
 torchvision==0.16.0
 tqdm==4.65.0
