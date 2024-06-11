@@ -4,6 +4,7 @@ from src.utils.project_config import project_config
 from fastapi.middleware.cors import CORSMiddleware
 from src.utils.utils import *
 
+# Tung handsome
 from src.router import ocr_router
 
 app = FastAPI(
