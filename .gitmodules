@@ -1,0 +1,3 @@
+[submodule "src/PaddleOCR"]
+	path = src/PaddleOCR
+	url = https://github.com/nguyenquangtung/isoft_suzuki_be-ocr
