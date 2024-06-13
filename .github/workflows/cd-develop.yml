@@ -1,7 +1,6 @@
 name: build-test-deploy
 on:
-    pull_request:
-        types: [closed]
+    push:
         branches:
             - develop
     # push:
@@ -26,7 +25,7 @@ jobs:
     #         - run: CI= npm run build
 
     release:
-        runs-on: [self-hosted, cicd]
+        runs-on: [self-hosted]
 
         steps:
             - uses: TooMuch4U/actions-clean@v2.1
@@ -54,7 +53,7 @@ jobs:
                   docker push ngocthien23/ocr-be:latest
     deploy:
         needs: release
-        runs-on: [self-hosted, cicd]
+        runs-on: [self-hosted]
         steps:
           - uses: TooMuch4U/actions-clean@v2.1
           - name: start application in production
