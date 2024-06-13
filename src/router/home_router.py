@@ -12,9 +12,17 @@ router = APIRouter(prefix="")
 async def home_intr():
     return FileResponse("static/index.html")
 
+@router.get("/home")
+async def home():
+    return FileResponse("static/index.html")
+
 @router.get("/404")
 async def error():
     return FileResponse("static/404.html")
+
+@router.get("/about")
+async def error():
+    return FileResponse("static/about.html")
 
 @router.get("/contact")
 async def contact():
