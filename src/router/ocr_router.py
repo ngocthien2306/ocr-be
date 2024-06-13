@@ -7,8 +7,11 @@ import traceback
 
 router = APIRouter(prefix="/ocr")
 
+@router.get("/intr")
+async def intr():
+    return {"message": "OCR Powerfull", "author": "I-SOFT AI Team"}
 
-@router.post("/ocr-image/")
+@router.post("/ocr-image")
 async def process_image_endpoint(image_data: model.ImageBase64):
     try:
         image = ocr_service.base64_to_image(image_data.image_base64)
