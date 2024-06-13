@@ -13,10 +13,6 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Git LFS
-RUN apt-get install -y git-lfs && \
-    git lfs install
-
 # Set the working directory
 WORKDIR /app
 
