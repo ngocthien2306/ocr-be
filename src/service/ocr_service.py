@@ -280,7 +280,7 @@ def scan_document1(img, document_rect=(70, 85, 400, 565)):
 
 
 CHECKPOINT_MODEL_PATH_MBv3 = "model/model_mbv3_iou_mix_2C049.pth"
-CHECKPOINT_MODEL_PATH_R50 = "model/model_mbv3_iou_mix_2C049.pth"
+CHECKPOINT_MODEL_PATH_R50 = "model/model_r50_iou_mix_2C020.pth"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

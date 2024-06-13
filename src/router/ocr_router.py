@@ -51,6 +51,3 @@ async def process_image_endpoint(image_data: model.ImageBase64):
         raise HTTPException(status_code=400, detail=str(e))
 
 
-@router.get("/")
-async def read_root():
-    return "This is back end module. TungHandsome hello everyone."

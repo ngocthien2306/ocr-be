@@ -4,6 +4,7 @@ from src.utils.project_config import project_config
 from fastapi.middleware.cors import CORSMiddleware
 from src.utils.utils import *
 from src.router import ocr_router
+from src.router import home_router
 
 app = FastAPI(
     title=project_config.DOCS_TITLE,
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 
 app.include_router(ocr_router.router, tags=["OCR"])
+app.include_router(home_router.router, tags=["HOME"])
 
 if __name__ == "__main__":
     uvicorn.run(
