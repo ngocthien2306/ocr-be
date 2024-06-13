@@ -23,10 +23,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . /app/
 
-# Download Git LFS files
-RUN git lfs pull
-RUN git lfs ls-files
-
 # Expose the port
 EXPOSE 8000
 

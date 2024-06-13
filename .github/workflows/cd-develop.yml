@@ -39,6 +39,8 @@ jobs:
                   git reset --hard
                   git clean -fd
                   git pull origin develop
+                  git lfs pull
+                  git lfs ls-files
 
             - name: prepare app image
               run: |
