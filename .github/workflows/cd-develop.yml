@@ -46,12 +46,12 @@ jobs:
               run: |
                   cd /usr/app/ocr-be
                   git checkout develop
-                  docker build -t ocr-be .
+                  docker build -t ocr-be:latest .
 
             - name: push image to registry
               run: |
                   docker rmi ngocthien23/ocr-be:latest
-                #  docker tag ocr-fe:staging registry.i-soft.com.vn/ocr-fe:staging
+                  docker tag ocr-be:latest ngocthien23/ocr-be:latest
                   docker push ngocthien23/ocr-be:latest
     deploy:
         needs: release
