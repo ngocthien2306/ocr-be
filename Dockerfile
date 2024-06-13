@@ -14,8 +14,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Git LFS
-RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
-    apt-get install -y git-lfs && \
+RUN apt-get install -y git-lfs && \
     git lfs install
 
 # Set the working directory
@@ -30,6 +29,7 @@ COPY . /app/
 
 # Download Git LFS files
 RUN git lfs pull
+RUN git lfs ls-files
 
 # Expose the port
 EXPOSE 8000
