@@ -26,7 +26,6 @@ jobs:
     #         - run: CI= npm run build
 
     release:
-        needs: build
         runs-on: [self-hosted, cicd]
 
         steps:
