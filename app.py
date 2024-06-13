@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from src.utils.project_config import project_config
 from fastapi.middleware.cors import CORSMiddleware
 from src.utils.utils import *
@@ -23,6 +24,7 @@ app.add_middleware(
 
 app.include_router(ocr_router.router, tags=["OCR"])
 app.include_router(home_router.router, tags=["HOME"])
+app.mount("/", StaticFiles(directory="static"), name="static")
 
 if __name__ == "__main__":
     uvicorn.run(
